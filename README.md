@@ -7,7 +7,6 @@ This repository contains Python scripts to scrape publicly visible data (e.g., p
 ## Features
 - Scrape product/app name, rating, number of reviews, date, and comments.
 - Export to CSV for further analysis (e.g., sentiment analysis or market research).
-- Designed with modular functions to support easy customization.
 
 ## Disclaimer
 This project is intended for **educational and research purposes only**.  
