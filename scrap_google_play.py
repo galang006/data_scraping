@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 import time
 import pandas as pd
 
-url = "https://play.google.com/store/apps/details?id=com.shopee.id&hl=id"
+url = "https://play.google.com/store/apps/details?id=com.tokopedia.tkpd&hl=id"
 
 options = webdriver.ChromeOptions()
 options.add_argument("--headless=new")
@@ -19,7 +19,7 @@ try:
         EC.element_to_be_clickable((By.XPATH, "//button[.//span[text()='Lihat semua ulasan']]"))
     )
     see_all_button.click()
-    print("Tombol 'See all reviews' berhasil diklik.")
+    print("Tombol 'Lihat semua ulasan' berhasil diklik.")
 
 except Exception as e:
     print("Gagal klik tombol:", e)
@@ -62,6 +62,6 @@ time.sleep(3)
 
 print(len(data), "reviews collected.")
 df = pd.DataFrame(data, columns=['Date', 'Rating', 'Review'])
-df.to_csv('shopee_reviews.csv', index=False, encoding='utf-8-sig')
+df.to_csv('tokopedia_reviews.csv', index=False, encoding='utf-8-sig')
 driver.quit()
 
